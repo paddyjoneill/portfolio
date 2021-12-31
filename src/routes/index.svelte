@@ -1,1 +1,6 @@
-<h1>Patrick O'Neill Portfolio Site</h1>
+<script>
+    import Header from '$lib/components/Header.svelte'
+    import '$lib/styles/style.css'
+</script>
+
+<Header />
