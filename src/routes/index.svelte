@@ -9,7 +9,6 @@
 </script>
 
 <Header />
-<DropdownMenu />
 <About />
 <Services />
 <PreviousWork />
