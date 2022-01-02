@@ -45,35 +45,42 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 48px;
+		z-index: 11;
 	}
 
 	h1 {
 		margin-left: 16px;
 		font-size: medium;
 		font-weight: 400;
+		z-index: 11;
 	}
 
 	ul > li {
 		display: inline-block;
+		z-index: 11;
 	}
 
 	ul {
 		list-style-type: none;
+		z-index: 11;
 	}
 
 	li {
 		font-size: medium;
 		font-weight: 400;
 		margin-right: 16px;
+		z-index: 11;
 	}
 
 	a {
 		text-decoration: none;
 		color: black;
+		z-index: 11;
 	}
 
 	.hamburger {
 		display: none;
+		z-index: 11;
 	}
 
 	.bar {
@@ -84,16 +91,19 @@
 		-webkit-transition: all 0.3s ease-in-out;
 		transition: all 0.3s ease-in-out;
 		background-color: #101010;
+		z-index: 11;
 	}
 
 	@media only screen and (max-width: 640px) {
 		.hamburger{
 			display: block;
 			margin-right: 8px;
+		z-index: 11;
 		}
 
 		.header-ul{
 			display: none;
+		z-index: 11;
 		}
 	}
 </style>

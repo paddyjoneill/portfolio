@@ -25,10 +25,12 @@
 		background-color: rgb(248, 242, 242);
         justify-content: center;
         transition: 0.4s;
+        z-index: 10;
     }
 
     nav.invisible{
         top: -100%;
+        z-index: 10;
     }
 
 
@@ -37,13 +39,16 @@
         margin: 0px auto;
         padding: 0px;
         text-align: center;
+        z-index: 10;
 	}
     li{
         margin: 12px;
+        z-index: 10;
     }
 
     a{
         text-decoration: none;
         color: black;
+        z-index: 10;
     }
 </style>
