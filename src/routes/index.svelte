@@ -6,6 +6,7 @@
 	import Services from '$lib/components/services/Services.svelte';
 	import PreviousWork from '$lib/components/previouswork/PreviousWork.svelte';
 import Head from '$lib/components/head/Head.svelte';
+import Footer from '$lib/components/footer/Footer.svelte';
 </script>
 
 <Head />
@@ -14,6 +15,7 @@ import Head from '$lib/components/head/Head.svelte';
 <Services />
 <PreviousWork />
 <ContactForm />
+<Footer />
 
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
