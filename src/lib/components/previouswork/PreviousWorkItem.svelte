@@ -29,6 +29,7 @@
         display: grid;
         width: 480px;
         margin: 8px;
+        transition: transform 0.5s;
     }
 
     .previous-work-item{
@@ -67,21 +68,11 @@
     .description{
         margin: 8px;
         color: white;
-        transition: 0.4s;
-    }
-
-    .description-inactive{
-        margin-bottom: 24px;
     }
 
     .link a{
         color: white;
         text-decoration: none;
-        transition: 0.4s;
-    }
-
-    .link-inactive a{
-        margin-top: 24px;
     }
 
 </style>
