@@ -17,7 +17,7 @@
 </nav>
 
 <style>
-    nav{
+    nav {
         display: flex;
         position: fixed;
         top: 48px;
@@ -28,11 +28,10 @@
         z-index: 10;
     }
 
-    nav.invisible{
+    nav.invisible {
         top: -100%;
         z-index: 10;
     }
-
 
 	ul {
         list-style-type: none;
@@ -41,12 +40,13 @@
         text-align: center;
         z-index: 10;
 	}
-    li{
+
+    li {
         margin: 12px;
         z-index: 10;
     }
 
-    a{
+    a {
         text-decoration: none;
         color: black;
         z-index: 10;

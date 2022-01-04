@@ -1,12 +1,12 @@
 <script lang="ts">
-	import DropdownMenu from "./DropdownMenu.svelte";
+	import DropdownMenu from './DropdownMenu.svelte';
 
 	let showDropdown = false;
 
 	const handleHamburgerClick = () => {
-		console.log(!showDropdown)
-		showDropdown = !showDropdown
-	}
+		console.log(!showDropdown);
+		showDropdown = !showDropdown;
+	};
 </script>
 
 <header>
@@ -33,9 +33,7 @@
 		<span class="bar" />
 	</div>
 </header>
-<DropdownMenu
-	showDropdown={showDropdown}
-/>
+<DropdownMenu {showDropdown} />
 
 <style>
 	header {
@@ -95,15 +93,15 @@
 	}
 
 	@media only screen and (max-width: 640px) {
-		.hamburger{
+		.hamburger {
 			display: block;
 			margin-right: 8px;
-		z-index: 11;
+			z-index: 11;
 		}
 
-		.header-ul{
+		.header-ul {
 			display: none;
-		z-index: 11;
+			z-index: 11;
 		}
 	}
 </style>
