@@ -27,7 +27,7 @@
 <style>
     .previous-work-item-container{
         display: grid;
-        width: 480px;
+        width: 400px;
         margin: 8px;
         transition: transform 0.5s;
     }
@@ -36,7 +36,7 @@
         grid-area: 1/1;
         display: flex;
         flex-direction: column;
-        width: 480px;
+        width: 400px;
         background-color: rgb(248, 242, 242);
         margin-bottom: 8px;
     }
@@ -57,7 +57,7 @@
         justify-content: center;
         align-items: center;
         background-color: rgba(0,0,0,0.7);
-        width: 480px;
+        width: 400px;
         margin-bottom: 8px;
     }
 
