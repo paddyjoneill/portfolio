@@ -17,13 +17,13 @@
 	<nav>
 		<ul class="header-ul">
 			<li>
-				<a href="/">SERVICES</a>
+				<a href="#services">SERVICES</a>
 			</li>
 			<li>
 				<a href="/">ABOUT</a>
 			</li>
 			<li>
-				<a href="/">CONTACT</a>
+				<a href="#contact-form">CONTACT</a>
 			</li>
 		</ul>
 	</nav>

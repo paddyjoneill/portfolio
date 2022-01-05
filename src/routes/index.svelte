@@ -11,11 +11,13 @@ import Footer from '$lib/components/footer/Footer.svelte';
 
 <Head />
 <Header />
+<!-- <main> -->
 <About />
 <Services />
 <PreviousWork />
 <ContactForm />
 <Footer />
+<!-- </main> -->
 
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');

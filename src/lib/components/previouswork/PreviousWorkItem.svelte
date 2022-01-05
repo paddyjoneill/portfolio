@@ -29,7 +29,9 @@
         display: grid;
         width: 400px;
         margin: 8px;
-        transition: transform 0.5s;
+        border-radius: 3px;
+        /* transition: transform 0.5s; */
+        box-shadow: 6px 6px 4px 4px rgba(25,25,25,0.5);
     }
 
     .previous-work-item{
@@ -38,7 +40,6 @@
         flex-direction: column;
         width: 400px;
         background-color: rgb(248, 242, 242);
-        margin-bottom: 8px;
     }
 
     .site-image{
@@ -58,7 +59,7 @@
         align-items: center;
         background-color: rgba(0,0,0,0.7);
         width: 400px;
-        margin-bottom: 8px;
+        border-radius: 3px;
     }
 
     .no-overlay{

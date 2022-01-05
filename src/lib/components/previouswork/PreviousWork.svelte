@@ -1,7 +1,8 @@
-<script>
+<script lang="ts">
 	import PreviousWorkItem from './PreviousWorkItem.svelte';
+    import type {Site} from '$lib/interfaces/interfaces'
 
-    const sites = [
+    const sites: Site[] = [
         {
             siteName: "WellWork Yoga",
 			pictureUrl: "/images/previous_sites/wellworkyoga.png",
