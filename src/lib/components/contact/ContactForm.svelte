@@ -51,7 +51,7 @@
 	<h2>Contact</h2>
 	<p>I can by contacted at xxxxx@patrickoneill.dev or by filling in the contact form below</p>
 	<div class="form-container">
-		<form>
+		<form on:submit|preventDefault={onSubmit}>
 			<input
 				bind:value={name}
 				class="form-input"
@@ -77,7 +77,7 @@
 				placeholder="Message"
 			/>
 
-			<input type="submit" on:click={onSubmit} name="submit" value="SUBMIT" />
+			<input type="submit"  name="submit" value="SUBMIT" />
 		</form>
 	</div>
 </section>
