@@ -4,3 +4,8 @@ export interface Site {
     description: string
     url: string
 }
+
+export interface NavItem {
+    title: string
+    href: string
+}

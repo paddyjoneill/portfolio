@@ -1,5 +1,6 @@
 <script lang="ts">
 	import DropdownMenu from './DropdownMenu.svelte';
+	import type {NavItem} from '$lib/interfaces/interfaces'
 
 	let showDropdown = false;
 
@@ -7,6 +8,21 @@
 		console.log(!showDropdown);
 		showDropdown = !showDropdown;
 	};
+
+	const navItems: NavItem[] = [
+		{
+			title: 'About',
+			href: '/'
+		},
+		{
+			title: 'SERVICES',
+			href: '#services'
+		},
+		{
+			title: 'CONTACT',
+			href: '#contact-form'
+		}
+	]
 </script>
 
 <header>
