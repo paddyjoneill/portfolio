@@ -9,3 +9,9 @@ export interface NavItem {
     title: string
     href: string
 }
+
+export interface Service {
+    icon: string
+    title: string
+    description: string
+}

@@ -1,18 +1,17 @@
 <script lang="ts">
+import type { NavItem } from "$lib/interfaces/interfaces";
+
     export let showDropdown: boolean;
+    export let navItems: NavItem[];
 </script>
 
 <nav class={showDropdown ? 'visible' : 'invisible'}>
 	<ul>
-		<li>
-			<a href="/">SERVICES</a>
-		</li>
-		<li>
-			<a href="/">ABOUT</a>
-		</li>
-		<li>
-			<a href="/">CONTACT</a>
-		</li>
+        {#each navItems as navItem }
+        <li>
+            <a href={navItem.href} on:click>{navItem.title}</a>
+        </li>
+        {/each}
 	</ul>
 </nav>
 

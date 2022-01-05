@@ -9,9 +9,13 @@
 		showDropdown = !showDropdown;
 	};
 
+	const closeMenu = () => {
+		showDropdown = false
+	}
+
 	const navItems: NavItem[] = [
 		{
-			title: 'About',
+			title: 'ABOUT',
 			href: '/'
 		},
 		{
@@ -32,15 +36,11 @@
 
 	<nav>
 		<ul class="header-ul">
+			{#each navItems as navItem }
 			<li>
-				<a href="#services">SERVICES</a>
+				<a href={navItem.href}>{navItem.title}</a>
 			</li>
-			<li>
-				<a href="/">ABOUT</a>
-			</li>
-			<li>
-				<a href="#contact-form">CONTACT</a>
-			</li>
+			{/each}
 		</ul>
 	</nav>
 	<div class="hamburger" on:click={handleHamburgerClick}>
@@ -49,7 +49,7 @@
 		<span class="bar" />
 	</div>
 </header>
-<DropdownMenu {showDropdown} />
+<DropdownMenu {showDropdown} {navItems} on:click={closeMenu} />
 
 <style>
 	header {
