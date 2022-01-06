@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {fade, slide} from 'svelte/transition'
+
     export let pictureUrl: string;
     export let siteName: string;
     export let description: string;
@@ -16,10 +18,12 @@
         <img class="site-image" src={pictureUrl} alt={siteName}/>
         <h3 class="site-name">{siteName}</h3>
     </div>
-    <div class={showOverlay ? "overlay" : "no-overlay"}>
-        <p class={showOverlay ? "description" : "description-inactive"}>{description}</p>
-        <p class={showOverlay ? "link" : "link-inactive"}><a href={url}>Visit Site</a></p>
+    {#if showOverlay}
+    <div transition:fade class={showOverlay ? "overlay" : "no-overlay"}>
+        <p transition:slide class={showOverlay ? "description" : "description-inactive"}>{description}</p>
+        <p transition:slide class={showOverlay ? "link" : "link-inactive"}><a href={url}>Visit Site</a></p>
     </div>
+    {/if}
 
 </div>
 

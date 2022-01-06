@@ -1,6 +1,6 @@
 <script lang="ts">
 	import DropdownMenu from './DropdownMenu.svelte';
-	import type {NavItem} from '$lib/interfaces/interfaces'
+	import NavItems from '$lib/stores/NavItemStore'
 
 	let showDropdown = false;
 
@@ -13,20 +13,6 @@
 		showDropdown = false
 	}
 
-	const navItems: NavItem[] = [
-		{
-			title: 'ABOUT',
-			href: '/'
-		},
-		{
-			title: 'SERVICES',
-			href: '#services'
-		},
-		{
-			title: 'CONTACT',
-			href: '#contact-form'
-		}
-	]
 </script>
 
 <header>
@@ -36,7 +22,7 @@
 
 	<nav>
 		<ul class="header-ul">
-			{#each navItems as navItem }
+			{#each $NavItems as navItem }
 			<li>
 				<a href={navItem.href}>{navItem.title}</a>
 			</li>
@@ -49,7 +35,7 @@
 		<span class="bar" />
 	</div>
 </header>
-<DropdownMenu {showDropdown} {navItems} on:click={closeMenu} />
+<DropdownMenu {showDropdown} navItems={$NavItems} on:click={closeMenu} />
 
 <style>
 	header {
