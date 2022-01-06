@@ -4,19 +4,19 @@ import ServiceItem from "./ServiceItem.svelte";
 
     const services: Service[] = [
         {
-            icon: '/icon.png',
-            title: 'Website Design',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            icon: '/images/icons/laptop_phone.svg',
+            title: 'Responsive Website Design',
+            description: 'Websites that look good on Mobile, Tablet or PC.'
         },
         {
-            icon: '/icon.png',
+            icon: '/images/icons/web.svg',
             title: 'Website Hosting and email Setup',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            description: 'We minimise your ongoing hosting and email costs.'
         },
         {
-            icon: '/icon.png',
+            icon: '/images/icons/search.svg',
             title: 'SEO',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            description: 'Our websites are optimised for good SEO.'
         }
     ]
 </script>
