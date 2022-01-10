@@ -10,7 +10,7 @@ import ServiceItem from "./ServiceItem.svelte";
         },
         {
             icon: '/images/icons/web.svg',
-            title: 'Website Hosting and email Setup',
+            title: 'Website Hosting and Setup',
             description: 'We minimise your ongoing hosting and email costs.'
         },
         {
@@ -23,13 +23,21 @@ import ServiceItem from "./ServiceItem.svelte";
 
 <section id="services">
     <h2>Services</h2>
-    {#each services as service}
-        <ServiceItem {service} />
-    {/each}
+    <div class="services-container">
+        {#each services as service}
+            <ServiceItem {service} />
+        {/each}
+    </div>
 </section>
 
 <style>
     section{
         margin: 8px;
+    }
+
+    .services-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 </style>
