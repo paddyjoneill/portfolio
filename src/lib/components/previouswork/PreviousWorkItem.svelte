@@ -31,7 +31,11 @@
 <style>
     .previous-work-item-container{
         display: grid;
-        width: 400px;
+        /* width: 400px; */
+        /* width: 45%; */
+        max-width: 600px;
+        min-width: 300px;   
+        flex-grow: 1;
         margin: 8px;
         border-radius: 3px;
         /* transition: transform 0.5s; */
@@ -42,12 +46,14 @@
         grid-area: 1/1;
         display: flex;
         flex-direction: column;
-        width: 400px;
+        /* width: 400px; */
+        /* flex-grow: 1; */
         background-color: rgb(248, 242, 242);
     }
 
     .site-image{
-        margin: 4px;
+        /* margin: 4px; */
+        width: 100%;
     }
 
     .site-name{
@@ -62,7 +68,11 @@
         justify-content: center;
         align-items: center;
         background-color: rgba(0,0,0,0.7);
-        width: 400px;
+        /* width: 400px; */
+        width: 100%;
+        /* max-width: 600px;
+        min-width: 300px;   
+        flex-grow: 1; */
         border-radius: 3px;
     }
 
