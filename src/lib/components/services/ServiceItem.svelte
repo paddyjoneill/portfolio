@@ -15,7 +15,7 @@
 <style>
     .service-item{
         border: black 1px solid;
-        background-color: white;
+        background-color: rgb(248, 242, 242);
         width: 300px;
     }
 
