@@ -11,6 +11,14 @@
 		sit amet nisl. Dictumst quisque sagittis purus sit amet volutpat. Quis ipsum suspendisse
 		ultrices gravida dictum fusce ut. Etiam erat velit scelerisque in.
 	</p>
+	<p>
+		Before I was a software developer I ran a small business and wanted a website to increase my customer base and 
+		tell my story. I was overwhelmed by the various options and also the high recurring costs.
+	</p>
+	<p>
+		I want to help small businesses who where in the position I was and help them get a cheap to run, fast and SEO 
+		friendly website and a professional email address.
+	</p>
 </section>
 
 <style>

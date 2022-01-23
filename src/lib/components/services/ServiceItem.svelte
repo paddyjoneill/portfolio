@@ -14,8 +14,10 @@
 
 <style>
     .service-item{
+        margin-top: 12px;
         border: black 1px solid;
         background-color: rgb(248, 242, 242);
+        min-width: 300px;
         width: 300px;
     }
 

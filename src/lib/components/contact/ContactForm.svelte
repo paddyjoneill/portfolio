@@ -49,7 +49,7 @@
 
 <section id="contact-form">
 	<h2>Contact</h2>
-	<p>I can by contacted at xxxxx@patrickoneill.dev or by filling in the contact form below</p>
+	<p>I can by contacted at hello@patrickoneill.dev or by filling in the contact form below</p>
 	<div class="form-container">
 		<form on:submit|preventDefault={onSubmit}>
 			<input
