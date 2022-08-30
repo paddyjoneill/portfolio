@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "businessName": "What business are you?",
+    "mainMessage": "Main Hero Message to sell yourself!",
+    "subMessage": "Sub-hero message, not too long and not too short. Make it just right!",
+    "buttonText": "Subscribe"
+  },
+  "features": {
+    "title": "Features",
+    "box1": {
+      "smallTitle": "Save Money",
+      "title": "No/Low Cost",
+      "text": "We keep ongoing costs down to a minimum"
+    },
+    "box2": {
+      "smallTitle": "Save Money",
+      "title": "No/Low Cost",
+      "text": "We keep ongoing costs down to a minimum"
+    },
+    "box3": {
+      "smallTitle": "Save Money",
+      "title": "No/Low Cost",
+      "text": "We keep ongoing costs down to a minimum"
+    }
+  }
+}
