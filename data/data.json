@@ -21,9 +21,9 @@
     ]
   },
   "hero": {
-    "businessName": "What business are you?",
-    "mainMessage": "Main Hero Message to sell yourself!",
-    "subMessage": "Sub-hero message, not too long and not too short. Make it just right!",
+    "businessName": "Patrick O'Neill Web Development",
+    "mainMessage": "Helping Small Businesses Get Online",
+    "subMessage": "Fast, SEO friendly sites with low ongoing costs",
     "showButton": false,
     "buttonText": "Subscribe"
   },
