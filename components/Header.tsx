@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { HeaderData } from '../interfaces/interfaces';
 
-interface Props {
+interface Props extends HeaderData {
     atTop: boolean;
 }
 
 const Header = (props: Props) => {
-    const title = 'PATRICKONEILL.DEV';
+    const title = props.title;
 
     const [menuVisible, setMenuVisible] = useState<boolean>(false);
 

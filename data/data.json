@@ -1,4 +1,11 @@
 {
+  "seo" : {
+    "title": "Patrick O'Neill Web Development",
+    "description": "Web Developer based in West Lothian helping local businesses get their businesses online."
+  },
+  "header": {
+    "title": "PATRICKONEILL.DEV"
+  },
   "hero": {
     "businessName": "What business are you?",
     "mainMessage": "Main Hero Message to sell yourself!",

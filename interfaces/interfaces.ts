@@ -1,9 +1,20 @@
 export interface PageData {
+    seo: SEOData;
+    header: HeaderData;
     hero: HeroData;
     services: ServicesData;
     features: FeaturesData;
     examples: ExampleSitesData;
     contact: ContactFormData;
+}
+
+export interface HeaderData {
+    title: string;
+}
+
+export interface SEOData {
+    title: string;
+    description: string;
 }
 
 export interface HeroData {

@@ -28,8 +28,8 @@ const Home = (props: Props) => {
 
     return (
         <div style={{ height: '100vh', overflowY: 'scroll' }} onScroll={handleScroll}>
-            <SEO title={"patrick o'neill"} description={'web developer'} />
-            <Header atTop={atTop} />
+            <SEO {...props.data.seo} />
+            <Header {...props.data.header} atTop={atTop} />
             <Hero {...props.data.hero} />
             <Services {...props.data.services} />
             <ExampleSites {...props.data.examples} />
