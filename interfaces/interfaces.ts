@@ -10,6 +10,12 @@ export interface PageData {
 
 export interface HeaderData {
     title: string;
+    links: LinkData[];
+}
+
+export interface LinkData {
+    text: string;
+    url: string;
 }
 
 export interface SEOData {
@@ -21,6 +27,7 @@ export interface HeroData {
     businessName: string;
     mainMessage: string;
     subMessage: string;
+    showButton: boolean;
     buttonText: string;
 }
 

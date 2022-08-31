@@ -6,7 +6,20 @@ interface Props extends HeaderData {
 }
 
 const Header = (props: Props) => {
+    const textColour = props.atTop ? 'text-white' : 'text-gray-800';
+
     const title = props.title;
+
+    const links = props.links.map((link) => (
+        <li className="mr-3" key={link.text}>
+            <a
+                className={`inline-block ${textColour} no-underline hover:text-gray-800 hover:text-underline py-2 px-4`}
+                href={link.url}
+            >
+                {link.text}
+            </a>
+        </li>
+    ));
 
     const [menuVisible, setMenuVisible] = useState<boolean>(false);
 
@@ -23,16 +36,14 @@ const Header = (props: Props) => {
     const headerBaseClassName = 'fixed w-full z-30 top-0 text-white';
     const headerClassName = `${headerBaseClassName}${props.atTop ? '' : ' bg-white shadow'}`;
 
-    const navActionBaseClassName =
-        'mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out';
-    const navActionAtTopClassName = 'bg-white text-gray-800';
-    const navActionNotAtTopClassName = 'gradient text-white';
-
-    const navActionClassName = `${navActionBaseClassName}${
-        props.atTop ? navActionAtTopClassName : navActionNotAtTopClassName
-    }`;
-
-    const textColour = props.atTop ? 'text-white' : 'text-gray-800';
+    // const navActionBaseClassName =
+    //     'mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out';
+    // const navActionAtTopClassName = 'bg-white text-gray-800';
+    // const navActionNotAtTopClassName = 'gradient text-white';
+    //
+    // const navActionClassName = `${navActionBaseClassName}${
+    //     props.atTop ? navActionAtTopClassName : navActionNotAtTopClassName
+    // }`;
 
     return (
         <nav id="header" className={headerClassName}>
@@ -59,31 +70,32 @@ const Header = (props: Props) => {
                 </div>
                 <div className={navContentClassName} id="nav-content">
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
-                        <li className="mr-3">
-                            <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">
-                                Active
-                            </a>
-                        </li>
-                        <li className="mr-3">
-                            <a
-                                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                                href="#"
-                            >
-                                link
-                            </a>
-                        </li>
-                        <li className="mr-3">
-                            <a
-                                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                                href="#"
-                            >
-                                link
-                            </a>
-                        </li>
+                        {links}
+                        {/*<li className="mr-3">*/}
+                        {/*    <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">*/}
+                        {/*        Active*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
+                        {/*<li className="mr-3">*/}
+                        {/*    <a*/}
+                        {/*        className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"*/}
+                        {/*        href="#"*/}
+                        {/*    >*/}
+                        {/*        link*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
+                        {/*<li className="mr-3">*/}
+                        {/*    <a*/}
+                        {/*        className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"*/}
+                        {/*        href="#"*/}
+                        {/*    >*/}
+                        {/*        link*/}
+                        {/*    </a>*/}
+                        {/*</li>*/}
                     </ul>
-                    <button id="navAction" className={navActionClassName}>
-                        Action
-                    </button>
+                    {/*<button id="navAction" className={navActionClassName}>*/}
+                    {/*    Action*/}
+                    {/*</button>*/}
                 </div>
             </div>
             {/*<hr className="border-b border-gray-100 opacity-25 my-0 py-0" />*/}

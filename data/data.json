@@ -4,16 +4,31 @@
     "description": "Web Developer based in West Lothian helping local businesses get their businesses online."
   },
   "header": {
-    "title": "PATRICKONEILL.DEV"
+    "title": "PATRICKONEILL.DEV",
+    "links" : [
+      {
+        "text": "About",
+        "url": "#about"
+      },
+      {
+        "text": "Pricing",
+        "url": "#pricing"
+      },
+      {
+        "text": "Contact",
+        "url": "#contact"
+      }
+    ]
   },
   "hero": {
     "businessName": "What business are you?",
     "mainMessage": "Main Hero Message to sell yourself!",
     "subMessage": "Sub-hero message, not too long and not too short. Make it just right!",
+    "showButton": false,
     "buttonText": "Subscribe"
   },
   "services": {
-    "title": "Services",
+    "title": "About",
     "firstSection": {
       "title": "First Section Title",
       "text": "First section text"
