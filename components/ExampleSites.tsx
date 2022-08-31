@@ -1,34 +1,8 @@
-import ExampleSiteCard, { ExampleSiteCardProps } from './ExampleSiteCard';
+import ExampleSiteCard from './ExampleSiteCard';
+import { ExampleSitesData } from '../interfaces/interfaces';
 
-const ExampleSites = () => {
-    const cardsArray: ExampleSiteCardProps[] = [
-        {
-            link: 'https://patsstats.co.uk',
-            imageUrl: '/images/patsstats.png',
-            title: "Pat's Stats",
-            description: 'Football betting stats site',
-        },
-        {
-            link: 'https://patsstats.co.uk',
-            imageUrl: '/images/patsstats.png',
-            title: "Pat's Stats",
-            description: 'Football betting stats site',
-        },
-        {
-            link: 'https://patsstats.co.uk',
-            imageUrl: '/images/patsstats.png',
-            title: "Pat's Stats",
-            description: 'Football betting stats site',
-        },
-        {
-            link: 'https://patsstats.co.uk',
-            imageUrl: '/images/patsstats.png',
-            title: "Pat's Stats",
-            description: 'Football betting stats site',
-        },
-    ];
-
-    const cards = cardsArray.map((c, idx) => <ExampleSiteCard {...c} key={idx + c.imageUrl} />);
+const ExampleSites = (props: ExampleSitesData) => {
+    const cards = props.sites.map((c, idx) => <ExampleSiteCard {...c} key={idx + c.imageUrl} />);
 
     const title = 'Examples Sites';
 

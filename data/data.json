@@ -5,6 +5,17 @@
     "subMessage": "Sub-hero message, not too long and not too short. Make it just right!",
     "buttonText": "Subscribe"
   },
+  "services": {
+    "title": "Services",
+    "firstSection": {
+      "title": "First Section Title",
+      "text": "First section text"
+    },
+    "secondSection": {
+      "title": "Second Section Title",
+      "text": "Second section text"
+    }
+  },
   "features": {
     "title": "Features",
     "box1": {
@@ -22,5 +33,38 @@
       "title": "No/Low Cost",
       "text": "We keep ongoing costs down to a minimum"
     }
+  },
+  "examples": {
+    "sites": [
+      {
+        "link": "https://patsstats.co.uk",
+        "imageUrl": "/images/patsstats.png",
+        "title": "Pat's Stats",
+        "description": "Football betting stats site"
+      },
+      {
+        "link": "https://patsstats.co.uk",
+        "imageUrl": "/images/patsstats.png",
+        "title": "Pat's Stats",
+        "description": "Football betting stats site"
+      },
+      {
+        "link": "https://patsstats.co.uk",
+        "imageUrl": "/images/patsstats.png",
+        "title": "Pat's Stats",
+        "description": "Football betting stats site"
+      },
+      {
+        "link": "https://patsstats.co.uk",
+        "imageUrl": "/images/patsstats.png",
+        "title": "Pat's Stats",
+        "description": "Football betting stats site"
+      }
+    ]
+  },
+  "contact" : {
+    "email": "hello@patrickoneill.dev",
+    "phone": "",
+    "address": ""
   }
 }

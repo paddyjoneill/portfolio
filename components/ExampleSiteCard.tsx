@@ -1,11 +1,6 @@
-export interface ExampleSiteCardProps {
-    imageUrl: string;
-    link: string;
-    title: string;
-    description: string;
-}
+import { ExampleSite } from '../interfaces/interfaces';
 
-const ExampleSiteCard = (props: ExampleSiteCardProps) => {
+const ExampleSiteCard = (props: ExampleSite) => {
     return (
         <div className="my-8 rounded-lg shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
             {/*clickable area*/}

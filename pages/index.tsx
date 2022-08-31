@@ -31,13 +31,13 @@ const Home = (props: Props) => {
             <SEO title={"patrick o'neill"} description={'web developer'} />
             <Header atTop={atTop} />
             <Hero {...props.data.hero} />
-            <Services />
-            <ExampleSites />
+            <Services {...props.data.services} />
+            <ExampleSites {...props.data.examples} />
             <Features {...props.data.features} />
             <Pricing />
-            <ContactForm />
-            <CallToAction />
-            <Footer />
+            <ContactForm {...props.data.contact} />
+            {/*<CallToAction />*/}
+            {/*<Footer />*/}
         </div>
     );
 };
