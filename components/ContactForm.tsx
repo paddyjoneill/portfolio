@@ -14,12 +14,18 @@ const ContactForm = (props: ContactFormData) => {
     const emailRef = useRef(null);
     const messageRef = useRef(null);
 
+    const generateKey = () => {
+        const utc = new Date().getTime();
+        return window.btoa(utc.toString());
+    };
+
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
         const name = (nameRef.current as unknown as InputRefType).value;
         const email = (emailRef.current as unknown as InputRefType).value;
         const message = (messageRef.current as unknown as InputRefType).value;
-        const payload = { name, email, message };
+        const key = generateKey();
+        const payload = { name, email, message, key };
 
         // validation
         if (!EmailValidator.validate(email)) {
@@ -191,6 +197,9 @@ const ContactForm = (props: ContactFormData) => {
                                 >
                                     Submit
                                 </button>
+                                <div className="h-6 mt-4 text-black flex justify-center">
+                                    <p>{successMessage}</p>
+                                </div>
                             </form>
                         </div>
                     </div>

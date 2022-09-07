@@ -1,28 +1,47 @@
-const sgMail = require('@sendgrid/mail');
-const { SENDGRID_API_KEY } = process.env;
+const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
     const payload = req.body;
 
-    const { name, email, phone, message } = payload;
+    const { name, email, message, key } = payload;
 
-    if (SENDGRID_API_KEY === undefined) {
-        res.status(500).json({ message: 'API key missing' });
+    const utcFromRequest = parseInt(atob(key));
+
+    const utc = new Date().getTime();
+    const difference = utc - utcFromRequest;
+    const maxDifferenceAllowed = 1000;
+
+    if (difference > maxDifferenceAllowed) {
+        res.status(401).json({ message: 'unauthorized' });
     }
 
-    sgMail.setApiKey(SENDGRID_API_KEY);
+    const to = 'hello@patrickoneill.dev';
+    const secret = SECRET_KEY;
+    const url = EMAIL_LAMBDA;
 
-    const msg = {
-        to: 'hello@patrickoneill.dev',
-        from: 'paddyjoneill@hotmail.com',
-        subject: ' from ' + name + ' email ' + email + ' phone' + phone,
-        html: message,
+    const payloadToForward = {
+        from: email,
+        name,
+        to,
+        message,
+        phone: '',
+        secret,
     };
 
-    console.log({ msg });
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payloadToForward),
+    });
 
-    sgMail
-        .send(msg)
-        .then(() => res.status(200).json({ message: 'Message Sent' }))
-        .catch((e) => res.status(e.code).json({ message: e.message }));
+    if (response.ok) {
+        res.status(200).json({ message: 'email sent' });
+    } else if (response.status === 401) {
+        res.status(401).json({ message: 'to address not recognized' });
+    } else if (response.status === 500) {
+        res.status(500).json({ message: 'aws error' });
+    }
 }

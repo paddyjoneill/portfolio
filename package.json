@@ -13,15 +13,18 @@
     "@sendgrid/mail": "^7.7.0",
     "email-validator": "^2.0.4",
     "next": "12.2.5",
+    "node-mailjet": "^5.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@types/email-validator": "^1.0.6",
     "@types/node": "18.7.9",
+    "@types/node-mailjet": "^3.3.9",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
+    "aws-sdk": "^2.1210.0",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
