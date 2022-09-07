@@ -9,10 +9,11 @@ export default async function handler(req, res) {
 
     const utc = new Date().getTime();
     const difference = utc - utcFromRequest;
-    const maxDifferenceAllowed = 1000;
+    const maxDifferenceAllowed = 10000;
 
     if (difference > maxDifferenceAllowed) {
         res.status(401).json({ message: 'unauthorized' });
+        return;
     }
 
     const to = 'hello@patrickoneill.dev';
