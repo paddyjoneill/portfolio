@@ -193,9 +193,9 @@ const ContactForm = (props: ContactFormData) => {
                                 <button
                                     disabled={sendDisabled}
                                     type="submit"
-                                    className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
+                                    className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 disabled:bg-gray-400 transition ease-in-out duration-300"
                                 >
-                                    Submit
+                                    {!sendDisabled ? 'Submit' : 'Sending...'}
                                 </button>
                                 <div className="h-6 mt-4 text-black flex justify-center">
                                     <p>{successMessage}</p>
