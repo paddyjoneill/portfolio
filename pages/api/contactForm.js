@@ -3,7 +3,7 @@ const { SECRET_KEY, EMAIL_LAMBDA } = process.env;
 export default async function handler(req, res) {
     const payload = req.body;
 
-    const { name, email, message, key } = payload;
+    const { name, email, phone, message, key } = payload;
 
     const utcFromRequest = parseInt(atob(key));
 
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
         name,
         to,
         message,
-        phone: '',
+        phone,
         secret,
     };
 
