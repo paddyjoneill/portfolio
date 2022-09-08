@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         return;
     }
 
-    const to = 'hello@patrickoneill.dev';
+    const to = process.env.TO_ADDRESS;
     const secret = SECRET_KEY;
     const url = EMAIL_LAMBDA;
 
